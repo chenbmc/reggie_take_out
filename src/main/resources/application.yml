@@ -1,0 +1,28 @@
+#pom插件启动的端口号，port：后有空格，能够自动识别的对象
+server:
+  port: 8080
+
+spring:
+  application:
+    #应用的名称 可选
+    name: reggie_take_out
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/reggie
+      username: root
+      password: 123qqq
+
+mybatis-plus:
+  configuration:
+    #在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: ASSIGN_ID
+
+#配置的 文件转存路径，在commonController中应用
+reggie:
+  path: C:\Users\zyChen\Desktop\瑞吉外卖-资料\1 瑞吉外卖项目\图片资源\
+
